@@ -1,0 +1,29 @@
+// Se sua classe estiver em um pacote, adicione a linha de declaração do pacote aqui
+// Exemplo: package com.minhaaplicacao;
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.Parent;
+import javafx.fxml.FXMLLoader;
+
+public class MainApp extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
+        primaryStage.setTitle("Meu Aplicativo JavaFX");
+
+        // Configura a cena e mostra a janela
+        primaryStage.setScene(new Scene(root));
+
+        // Abre a janela em tela cheia
+        primaryStage.setFullScreen(true);
+
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}

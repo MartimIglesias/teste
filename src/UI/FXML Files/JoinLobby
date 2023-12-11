@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:///C:/Users/marti/OneDrive/Ambiente%20de%20Trabalho/Universidade/4%C2%BAANO/PSW/A_Aldeia/Visual_Assets/Background_MainPage.jpg');" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateLobby">
+
+    <children>
+        <!-- Botão de Configurações com Imagem -->
+        <Button fx:id="settingsButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="35.0" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="25.0" preserveRatio="true">
+                    <image>
+                        <Image url="file:///C:/Users/marti/OneDrive/Ambiente%20de%20Trabalho/Universidade/4%C2%BAANO/PSW/A_Aldeia/Visual_Assets/settings.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <!-- Campo de Texto para Nome do Jogador -->
+        <TextField fx:id="playerNameInput" layoutX="55.0" layoutY="91.0" promptText="Insert your name" />
+
+        <!-- Botão "Update" -->
+        <Button fx:id="updateButton" text="Update" AnchorPane.leftAnchor="55" AnchorPane.topAnchor="124" />
+
+        <!-- Campo de Texto para Código do Lobby -->
+        <TextField fx:id="lobbyCodeInput" promptText="Lobby Code" AnchorPane.leftAnchor="124" AnchorPane.topAnchor="32" />
+
+        <!-- Texto "Lobby Code:" -->
+        <Text fill="#ffd000" layoutX="53.0" layoutY="49.0" text="Lobby Code:" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="36.05078125" />
+
+        <!-- Textos para Sliders -->
+        <Text fill="#ffd000" layoutX="59.0" layoutY="190.0" text="Villagers:" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="177.0" />
+        <Text fill="#ffd000" layoutX="54.0" layoutY="223.0" text="Murderers:" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="210.0" />
+        <Text fill="#ffd000" layoutX="51.0" layoutY="258.0" text="Investigators:" AnchorPane.leftAnchor="51.0" AnchorPane.topAnchor="245.05078125" />
+
+        <!-- ListView para Mensagens do Chat -->
+        <ListView fx:id="chatMessagesArea" layoutX="243.0" layoutY="69.0" prefHeight="110.0" prefWidth="173.0" AnchorPane.rightAnchor="183.66666666666663" AnchorPane.topAnchor="69.0" />
+
+        <!-- Campo de Texto para Mensagens do Chat -->
+        <TextField fx:id="chatInputField" layoutX="243.0" layoutY="160.0" prefHeight="25.0" prefWidth="149.0" promptText="Chat Here..." AnchorPane.rightAnchor="207.66666666666663" AnchorPane.topAnchor="160.0" />
+
+        <!-- Botão "Send" -->
+        <Button fx:id="sendMessageButton" layoutX="393.0" layoutY="160.0" prefHeight="25.0" prefWidth="25.0" text="Send" AnchorPane.rightAnchor="181.66666666666669" AnchorPane.topAnchor="160.0">
+            <font>
+                <Font size="7.0" />
+            </font></Button>
+
+        <!-- TableView para Jogadores no Lobby -->
+        <TableView fx:id="playersTableView" prefHeight="301.0" prefWidth="149.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="68.0">
+            <columns>
+                <TableColumn fx:id="playerColumn" prefWidth="147.3333740234375" text="Players" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

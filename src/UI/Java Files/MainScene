@@ -1,0 +1,48 @@
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+
+public class MainScene {
+
+    // Método para lidar com o clique no botão "Create Lobby"
+    @FXML
+    private void handleCreateLobbyAction(ActionEvent event) {
+        try {
+            // Carregar o layout FXML para "Create Lobby"
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CreateLobby.fxml"));
+            Parent newRoot = loader.load();
+
+            // Obter a cena atual e atualizar seu conteúdo
+            Scene currentScene = ((Node) event.getSource()).getScene();
+            currentScene.setRoot(newRoot);
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Você pode querer lidar com o erro de maneira mais apropriada
+        }
+    }
+
+    @FXML
+    private void handleJoinLobbyAction(ActionEvent event) {
+        try {
+            // Carregar o layout FXML para "Join Lobby"
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("JoinLobby.fxml"));
+            Parent newRoot = loader.load();
+
+            // Obter a cena atual e atualizar seu conteúdo
+            Scene currentScene = ((Node) event.getSource()).getScene();
+            currentScene.setRoot(newRoot);
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Tratar o erro de maneira apropriada
+        }
+    }
+
+
+    // Outros métodos para lidar com eventos da MainScene podem ser adicionados aqui
+    // ...
+
+}
+

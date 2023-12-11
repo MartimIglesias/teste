@@ -1,0 +1,3 @@
+[submodule "src/src/network"]
+	path = src/src/network
+	url = https://github.com/grazianobolla/basic-chat.git
